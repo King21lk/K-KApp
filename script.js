@@ -20,3 +20,25 @@ function clearNote() {
   document.getElementById("note").value = "";
   alert("Note cleared!");
 }
+function startDictation() {
+  if (!('webkitSpeechRecognition' in window)) {
+    alert("Your browser doesn't support speech recognition.");
+    return;
+  }
+
+  const recognition = new webkitSpeechRecognition();
+  recognition.lang = 'en-US';
+  recognition.interimResults = false;
+  recognition.maxAlternatives = 1;
+
+  recognition.start();
+
+  recognition.onresult = function(event) {
+    const transcript = event.results[0][0].transcript;
+    document.getElementById('note').value = transcript;
+  };
+
+  recognition.onerror = function(event) {
+    alert('Error occurred in recognition: ' + event.error);
+  };
+}
