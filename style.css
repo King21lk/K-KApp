@@ -1,13 +1,10 @@
+css
 body {
   font-family: Arial, sans-serif;
-  background-color: #f0f8ff;
-  margin: 20px;
+  background-color: #f0f0f0;
   text-align: center;
+  padding-top: 50px;
 }
 h1 {
-  color: #333366;
-}
-p {
-  color: #555555;
-  font-size: 18px;
+  color: #333;
 }
