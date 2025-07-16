@@ -1,4 +1,3 @@
-js
 window.onload = function() {
   alert("Welcome to K K's Talking Ink!");
   const saved = localStorage.getItem("savedNote");
@@ -15,4 +14,9 @@ function saveNote() {
   } else {
     alert("Please type a note before saving.");
   }
+}
+function clearNote() {
+  localStorage.removeItem("savedNote");
+  document.getElementById("note").value = "";
+  alert("Note cleared!");
 }
