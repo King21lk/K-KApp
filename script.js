@@ -3,9 +3,9 @@ window.onload = function() {
   const saved = localStorage.getItem("savedNote");
   if (saved) {
     document.getElementById("note").value = saved;
+    document.getElementById("displayed-note").innerText = saved;
   }
 };
-
 function saveNote() {
   const note = document.getElementById("note").value;
   if (note.trim()) {
