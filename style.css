@@ -28,3 +28,16 @@ css
   font-style: italic;
   color: #666;
 }
+input#note {
+  width: 60%;
+  padding: 10px;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+button {
+  margin: 5px;
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+}
