@@ -8,3 +8,23 @@ body {
 h1 {
   color: #333;
 }
+css
+#saved-note-display {
+  margin-top: 30px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  display: inline-block;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#saved-note-display h2 {
+  margin: 0 0 10px;
+  color: #444;
+}
+
+#displayed-note {
+  font-style: italic;
+  color: #666;
+}
