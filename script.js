@@ -25,7 +25,16 @@ function startDictation() {
     alert("Your browser doesn't support speech recognition.");
     return;
   }
+function readNote() {
+  const note = document.getElementById("note").value;
+  if (!note.trim()) {
+    alert("No note to read.");
+    return;
+  }
 
+  const utterance = new SpeechSynthesisUtterance(note);
+  speechSynthesis.speak(utterance);
+}
   const recognition = new webkitSpeechRecognition();
   recognition.lang = 'en-US';
   recognition.interimResults = false;
