@@ -25,16 +25,18 @@ function startDictation() {
     alert("Your browser doesn't support speech recognition.");
     return;
   }
-function readNote() {
+  function readNote() {
   const note = document.getElementById("note").value;
   if (!note.trim()) {
     alert("No note to read.");
     return;
   }
 
-  const utterance = new SpeechSynthesisUtterance(note);
+  const utterance = new SpeechSynthesisUtterance();
+  utterance.text = note; // ← Add this line
+  utterance.lang = 'en-US';
   speechSynthesis.speak(utterance);
-}
+ }
   const recognition = new webkitSpeechRecognition();
   recognition.lang = 'en-US';
   recognition.interimResults = false;
