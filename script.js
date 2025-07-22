@@ -43,8 +43,9 @@ function startDictation() {
   recognition.interimResults = false;
   recognition.maxAlternatives = 1;
 
+setTimeout(() => {
   recognition.start();
-
+}, 200); // small delay to let browser settle
   recognition.onresult = function(event) {
     const transcript = event.results[0][0].transcript;
     document.getElementById('note').value = transcript;
