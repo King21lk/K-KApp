@@ -38,6 +38,7 @@ function startDictation() {
   speechSynthesis.speak(utterance);
  }
   const recognition = new webkitSpeechRecognition();
+  recognition.continuous = false;
   recognition.lang = 'en-US';
   recognition.interimResults = false;
   recognition.maxAlternatives = 1;
